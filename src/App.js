@@ -3,14 +3,14 @@ import { useEffect } from "react";
 import Header from './components/Header/Header';
 import { useTelegram } from './components/hooks/useTelegram';
 
-
+const tg = window.Telegram.WebApp;
 
 function App() {
-  const { onToogleButton, tg } = useTelegram;
+  const { onToogleButton } = useTelegram;
 
   useEffect(() => {
     tg.ready();
-  }, [tg]);
+  }, []);
 
 
   return (
